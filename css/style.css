@@ -1,0 +1,68 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: black;
+}
+
+.spaceship {
+  width: 150px;
+  animation: left-right 3.5s ease infinite;
+}
+
+@keyframes left-right {
+  0%,
+  100% {
+    transform: translateX(-35%);
+  }
+
+  50% {
+    transform: translateX(35%);
+  }
+}
+
+.hood {
+  position: relative;
+  background-color: cyan;
+  width: 100px;
+  height: 20px;
+  top: 150px;
+  margin: 0 auto;
+  border-radius: 50% 50% 10% 10%/80% 80% 5% 5%;
+}
+
+.chassis {
+  position: relative;
+  background-color: magenta;
+  width: 100%;
+  height: 32px;
+  bottom: -153px;
+  border-radius: 3% 3% 50% 50%/20% 20% 80% 80%;
+  overflow: hidden;
+}
+
+.circles {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  box-shadow: 38px 0 0 0px yellow, 75px 0 0 0px yellow, 110px 0 0 0px yellow,
+    150px 0 0 0px yellow;
+  position: absolute;
+  top: 5px;
+  animation: circles-rotation 4s linear infinite;
+}
+
+.circles:nth-child(2) {
+  animation-delay: 2s;
+}
+
+@keyframes circles-rotation {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
