@@ -9,7 +9,7 @@ body {
 
 .spaceship {
   width: 150px;
-  animation: left-right 3.5s ease infinite;
+  animation: left-right 2.7s ease infinite;
 }
 
 @keyframes left-right {
